@@ -17,7 +17,7 @@ class Templete extends Component{
                     press={this.props.press} click={this.props.click}/>
                 </div>
                 <div className="List">
-                    <List todos={this.props.todos}/>
+                    <List todos={this.props.todos} check={this.props.check}/>
                 </div>
             </main>
         );

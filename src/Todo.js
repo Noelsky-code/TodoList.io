@@ -4,12 +4,13 @@ import {Input,Button,FormGroup,ButtonGroup} from 'reactstrap';
 
 class Todo extends Component {
  render(){
+
     return(
   
         <div className="Todo">
-          <div className="Text">{this.props.name}</div>
+          <div className={this.props.checked? "Checked":"Text"}>{this.props.name}</div>
          <ButtonGroup className="Buttons">
-          <Button align = "right" color = "success" size ="sm">o</Button>
+          <Button align = "right" color = "success" size ="sm" onClick={()=>this.props.check(this.props.id)}>o</Button>
           <Button color ="danger" size ="sm">x</Button>
           </ButtonGroup>
         </div>

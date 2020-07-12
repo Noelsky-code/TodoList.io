@@ -9,8 +9,8 @@ class List extends Component {
     return(
         <div className="Lists">
           {this.props.todos.map(
-            ({id,name}) =>(
-               <Todo key={id} name={name}/>
+            ({id,name,checked}) =>(
+               <Todo id={id} key={id} name={name} check={this.props.check} checked={checked}/>
                     )
              )
        } </div>

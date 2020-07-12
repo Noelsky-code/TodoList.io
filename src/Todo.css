@@ -4,8 +4,16 @@
 }
 .Text{
     width:400px;
-
+    flex:1;
     float:left;
+}
+
+.Checked{
+    float:left;
+    width:460px;
+    text-decoration: line-through;
+    background-color:greenyellow;
+
 }
 .Buttons{
     float: right;
