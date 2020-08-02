@@ -5,7 +5,7 @@ import {Input,Button,FormGroup} from 'reactstrap';
 
 
 class App extends Component {
-id=1
+id=1;
 
 state={
   name:'',
@@ -51,7 +51,16 @@ _Check = (id)=>{
   this.setState({
     name:''
   })
+}
 
+_Delete = (id) =>{
+  const todos= this.state.todos;
+  this.setState({
+    todos:todos.filter(todo=> todo.id !== id)
+  })
+  this.setState({
+    name:''
+  })
 
 }
 
@@ -59,7 +68,8 @@ _Check = (id)=>{
   return (
     <div className="App">
       <Templete value={this.state.name} handle={this.HandleChange} 
-      press={this.onKeyPress} click={this.onClick} todos={this.state.todos} check={this._Check}>
+      press={this.onKeyPress} click={this.onClick} todos={this.state.todos} check={this._Check}
+      delete ={this._Delete}>
       </Templete>  
     </div>
     );

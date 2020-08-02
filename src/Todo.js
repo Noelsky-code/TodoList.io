@@ -11,7 +11,7 @@ class Todo extends Component {
           <div className={this.props.checked? "Checked":"Text"}>{this.props.name}</div>
          <ButtonGroup className="Buttons">
           <Button align = "right" color = "success" size ="sm" onClick={()=>this.props.check(this.props.id)}>o</Button>
-          <Button color ="danger" size ="sm">x</Button>
+          <Button color ="danger" size ="sm" onClick={()=>this.props.delete(this.props.id)}>x</Button>
           </ButtonGroup>
         </div>
     );
